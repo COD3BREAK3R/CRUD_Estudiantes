@@ -27,9 +27,7 @@ class EstudianteController extends Controller
                 // Usa whereRaw con la función LOWER para búsqueda sin distinción de mayúsculas/minúsculas
                 // y solo usa comodín al final para un mejor uso del índice
                 $q->whereRaw('LOWER(nombre) LIKE ?', [$term.'%'])
-                  ->orWhereRaw('LOWER(apellido) LIKE ?', [$term.'%'])
-                  ->orWhereRaw('LOWER(email) LIKE ?', [$term.'%'])
-                  ->orWhereRaw('LOWER(curso) LIKE ?', [$term.'%']);
+                  ->orWhereRaw('LOWER(edad) LIKE ?', [$term.'%']);
             });
         })
         ->orderBy('created_at', 'desc') // Ordena por fecha de creación, mostrando los más recientes primero
