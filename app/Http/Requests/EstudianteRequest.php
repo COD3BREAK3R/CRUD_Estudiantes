@@ -41,8 +41,8 @@ class EstudianteRequest extends FormRequest
             'nombre.regex' => 'El nombre no debe contener números',
             'edad.required' => 'La edad es obligatoria',
             'edad.integer' => 'La edad debe ser un número entero',
-            'edad.min' => 'La edad debe ser mayor a 0',
-            'edad.max' => 'La edad debe ser menor a 120',
+            'edad.min' => 'La edad debe ser mínimo de 1 año',
+            'edad.max' => 'La edad no debe ser menor a 120 años',
         ];
     }
 }
